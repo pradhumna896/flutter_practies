@@ -20,6 +20,8 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp>{
   var questionIndex = 0;
 
+
+
   void answerQuetion() {
     setState(() {
        questionIndex = questionIndex + 1;
@@ -60,7 +62,7 @@ class MyAppState extends State<MyApp>{
         body: Column(
           children: [
             Questions(
-              questions[questionIndex]['questionText'],),
+              questions[questionIndex]['questionText'] as String,),
             Answer(answerQuetion),
             Answer(answerQuetion),
             Answer(answerQuetion),
